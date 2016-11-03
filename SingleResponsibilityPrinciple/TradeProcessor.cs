@@ -75,7 +75,7 @@ namespace SingleResponsibilityPrinciple
                 return false;
             }
 
-            if(tradeAmount <= 1000 || tradeAmount >= 100000)
+            if(tradeAmount < 1000 || tradeAmount > 100000)
             {
                 LogMessage("WARN: Trade price on line {0} not a valid amount between $1,000 and $100,000: '{1}'", currentLine, fields[1]);
                 return false;
